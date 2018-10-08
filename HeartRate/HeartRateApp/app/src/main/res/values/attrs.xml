@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextBannerViewStyle">
+        <attr name="setInterval" format="integer|reference"/>
+        <attr name="setAnimDuration" format="integer|reference"/>
+        <attr name="setTextSize">
+              <enum name = "mTextSize0" value = "0"/>
+              <enum name = "mTextSize1" value = "1"/>
+        </attr>
+        <attr name="setTextColor" >
+            <enum name="mTextColor0" value="0"/>
+            <enum name="mTextColor1" value="1"/>
+            </attr>
+        <attr name="setSingleLine" format="boolean"/>
+        <attr name="setGravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="setDirection">
+            <enum name="bottom_to_top" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="left_to_right" value="3"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MyChartView">
+        <attr name="charttitle" format="string"/>
+        <attr name="introduce" format="string"/>
+        <attr name="lineColor" format="color"/>
+    </declare-styleable>
+
+</resources>
