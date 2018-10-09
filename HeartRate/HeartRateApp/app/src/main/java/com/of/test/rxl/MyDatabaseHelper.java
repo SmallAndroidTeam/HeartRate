@@ -1,9 +1,8 @@
-package com.ofilm.test.rxl;
+package com.of.test.rxl;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
 /**
  * Create By rongxinglan IN 2018/10/8
@@ -16,7 +15,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     +"max integer,"
     +"average integer)";
     private Context mContext;
-    public MyDatabaseHelper(Context context, String databaseName,  int version) {
+    public MyDatabaseHelper(Context context, String databaseName, int version) {
         super(context, databaseName, null, version);
        // mContext = context;
     }

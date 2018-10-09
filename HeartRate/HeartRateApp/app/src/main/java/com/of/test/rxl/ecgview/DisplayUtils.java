@@ -1,4 +1,4 @@
-package com.ofilm.test.rxl.ecgview;
+package com.of.test.rxl.ecgview;
 
 import android.app.Activity;
 import android.content.Context;

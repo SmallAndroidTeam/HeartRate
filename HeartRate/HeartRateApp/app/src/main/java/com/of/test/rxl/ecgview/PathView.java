@@ -1,24 +1,24 @@
-package com.ofilm.test.rxl.ecgview;
+package com.of.test.rxl.ecgview;
 
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.os.Handler;
+import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.of.test.rxl.R;
+
 import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  * Create By rongxinglan IN 2018/9/12
  */
 
-import android.support.annotation.Nullable;
 
-import com.ofilm.test.rxl.R;
 
 
 public class PathView extends View {

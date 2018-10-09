@@ -1,4 +1,4 @@
-package com.ofilm.test.rxl;
+package com.of.test.rxl;
 
 
 
@@ -15,8 +15,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 
-import com.ofilm.test.rxl.ecgview.PathView;
-import com.ofilm.test.rxl.ecgview.TextBannerView;
+import com.of.test.rxl.ecgview.PathView;
+import com.of.test.rxl.ecgview.TextBannerView;
 
 
 import java.util.ArrayList;
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private  int runCount =0;// 全局变量，用于判断是否是第一次执行
     final Handler mHandler = new Handler();
     private  TimerTask timerTask;
-  //  private SharedPreferencesHelper sharedPreferencesHelper;
+    //  private SharedPreferencesHelper sharedPreferencesHelper;
 
     private String DataBase_Name = "heart.db";
     private String Table_Name = "heartrate";
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-      //  sharedPreferencesHelper  = new SharedPreferencesHelper(MainActivity.this,"data");
+        //  sharedPreferencesHelper  = new SharedPreferencesHelper(MainActivity.this,"data");
         mMyDatabaseHelper = new MyDatabaseHelper(MainActivity.this,DataBase_Name,1);
         initView();
         loadData();
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 //        mMax.setText(Integer.toString(max));
         // setHeartRate(list);
         //mHeartRate.setText(Integer.toString(heartRate));
-          saveData();
+        saveData();
     }
 
 
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
         h_minimum =(TextBannerView)findViewById(R.id.h_minimum);
         h_maximum =(TextBannerView)findViewById(R.id.h_maximum);
         h_ave =(TextBannerView)findViewById(R.id.h_ave);
-       // mHeartRate.setText("000");
+        // mHeartRate.setText("000");
         Animation animation = AnimationUtils.loadAnimation(this, R.anim.scale);
         mHeartRate.startAnimation(animation);//开始动画
 
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
             int   number = list.get(i);
             int  n = 60000/number;
             mList.add(n);
-         //   Log.i("mlist","mlistmlist  "+mList);
+            //   Log.i("mlist","mlistmlist  "+mList);
         }
     }
     private  void  sort()
@@ -221,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         {
             sum+=data.get(i);
 
-          //  Log.i("b","aaaaaaaaaaaaaa"+sum);
+            //  Log.i("b","aaaaaaaaaaaaaa"+sum);
         }
         sum=sum/data.size();
     }

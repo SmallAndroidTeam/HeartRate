@@ -7,161 +7,161 @@
     android:background="@color/background"
     tools:context=".MainActivity">
 
-  <LinearLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="horizontal">
     <LinearLayout
-        android:layout_width="150dp"
-        android:layout_height="match_parent"
-        android:layout_weight="0"
-        android:orientation="vertical">
-
-      <FrameLayout
-          android:layout_width="match_parent"
-          android:layout_height="120dp">
-
-        <TextView
-            android:id="@+id/h_heartRate"
-            android:layout_width="match_parent"
-            android:layout_height="74dp"
-            android:layout_gravity="bottom"
-            android:gravity="center"
-            android:text="000"
-            android:textColor="@color/small"
-            android:textSize="70sp" />
-      </FrameLayout>
-      <TextView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="次/分钟"
-        android:textColor="@color/small"
-        android:textSize="15sp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:orientation="vertical">
 
-      <FrameLayout
-          android:layout_width="match_parent"
-          android:layout_height="30dp"
-          android:orientation="horizontal">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <TextView
+                    android:id="@+id/h_heartRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="74dp"
+                    android:layout_gravity="bottom"
+                    android:gravity="center"
+                    android:text="000"
+                    android:textColor="@color/small"
+                    android:textSize="70sp" />
+            </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="次/分钟"
+                android:textColor="@color/small"
+                android:textSize="15sp" />
+        </LinearLayout>
 
         <LinearLayout
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_gravity="center">
+            android:orientation="vertical">
 
-          <com.ofilm.test.rxl.ecgview.TextBannerView
-              android:id="@+id/h_minimum"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_weight="1"
-              android:text="最小"
-              android:textColor="@color/small"
-              app:setDirection="left_to_right"
-              app:setGravity="left"
-              app:setTextColor="mTextColor0"
-              app:setTextSize="mTextSize1" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal">
 
-          <com.ofilm.test.rxl.ecgview.TextBannerView
-              android:id="@+id/h_maximum"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_weight="1"
-              android:text="最大"
-              android:textColor="@color/small"
-              app:setDirection="left_to_right"
-              app:setGravity="left"
-              app:setTextColor="mTextColor0"
-              app:setTextSize="mTextSize1" />
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
 
-          <com.ofilm.test.rxl.ecgview.TextBannerView
-              android:id="@+id/h_ave"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:layout_weight="1"
-              android:text="平均"
-              android:textColor="@color/small"
-              app:setDirection="left_to_right"
-              app:setGravity="left"
-              app:setTextColor="mTextColor0"
-              app:setTextSize="mTextSize1" />
+                    <com.of.test.rxl.ecgview.TextBannerView
+                        android:id="@+id/h_minimum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="最小"
+                        android:textColor="@color/small"
+                        app:setDirection="left_to_right"
+                        app:setGravity="left"
+                        app:setTextColor="mTextColor0"
+                        app:setTextSize="mTextSize1" />
+
+                    <com.of.test.rxl.ecgview.TextBannerView
+                        android:id="@+id/h_maximum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="最大"
+                        android:textColor="@color/small"
+                        app:setDirection="left_to_right"
+                        app:setGravity="left"
+                        app:setTextColor="mTextColor0"
+                        app:setTextSize="mTextSize1" />
+
+                    <com.of.test.rxl.ecgview.TextBannerView
+                        android:id="@+id/h_ave"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="平均"
+                        android:textColor="@color/small"
+                        app:setDirection="left_to_right"
+                        app:setGravity="left"
+                        app:setTextColor="mTextColor0"
+                        app:setTextSize="mTextSize1" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <com.of.test.rxl.ecgview.TextBannerView
+                        android:id="@+id/h_min"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="00"
+                        app:setDirection="top_to_bottom"
+                        app:setGravity="center"
+                        app:setTextColor="mTextColor1"
+                        app:setTextSize="mTextSize0" />
+
+                    <com.of.test.rxl.ecgview.TextBannerView
+                        android:id="@+id/h_max"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="000"
+                        app:setDirection="top_to_bottom"
+                        app:setGravity="center"
+                        app:setTextColor="mTextColor1"
+                        app:setTextSize="mTextSize0" />
+
+                    <com.of.test.rxl.ecgview.TextBannerView
+                        android:id="@+id/h_average"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="00"
+                        app:setDirection="top_to_bottom"
+                        app:setGravity="center"
+                        app:setTextColor="mTextColor1"
+                        app:setTextSize="mTextSize0" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="100dp">
+
+                <com.of.test.rxl.ecgview.CardiographView
+                    android:id="@+id/ecg_data_ecgView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </com.of.test.rxl.ecgview.CardiographView>
+
+                <com.of.test.rxl.ecgview.PathView
+                    android:id="@+id/pathView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="健康感应方向盘心率检测中..."
+                android:textColor="@color/rate"
+                android:textSize="16sp" />
         </LinearLayout>
-      </FrameLayout>
-
-      <FrameLayout
-          android:layout_width="match_parent"
-          android:layout_height="40dp"
-          android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
-
-          <com.ofilm.test.rxl.ecgview.TextBannerView
-              android:id="@+id/h_min"
-              android:layout_width="50dp"
-              android:layout_height="match_parent"
-              android:layout_weight="1"
-              android:text="00"
-              app:setDirection="top_to_bottom"
-              app:setGravity="center"
-              app:setTextColor="mTextColor1"
-              app:setTextSize="mTextSize0" />
-
-          <com.ofilm.test.rxl.ecgview.TextBannerView
-              android:id="@+id/h_max"
-              android:layout_width="50dp"
-              android:layout_height="match_parent"
-              android:layout_weight="1"
-              android:text="000"
-              app:setDirection="top_to_bottom"
-              app:setGravity="center"
-              app:setTextColor="mTextColor1"
-              app:setTextSize="mTextSize0" />
-
-          <com.ofilm.test.rxl.ecgview.TextBannerView
-              android:id="@+id/h_average"
-              android:layout_width="50dp"
-              android:layout_height="match_parent"
-              android:layout_weight="1"
-              android:text="00"
-              app:setDirection="top_to_bottom"
-              app:setGravity="center"
-              app:setTextColor="mTextColor1"
-              app:setTextSize="mTextSize0" />
-        </LinearLayout>
-      </FrameLayout>
-
-      <RelativeLayout
-          android:layout_width="wrap_content"
-          android:layout_height="100dp">
-
-        <com.ofilm.test.rxl.ecgview.CardiographView
-            android:id="@+id/ecg_data_ecgView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </com.ofilm.test.rxl.ecgview.CardiographView>
-
-        <com.ofilm.test.rxl.ecgview.PathView
-            android:id="@+id/pathView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-      </RelativeLayout>
-
-      <TextView
-          android:layout_width="match_parent"
-          android:layout_height="50dp"
-          android:gravity="center"
-          android:text="健康感应方向盘心率检测中..."
-          android:textColor="@color/rate"
-          android:textSize="16sp" />
     </LinearLayout>
-  </LinearLayout>
 </LinearLayout>

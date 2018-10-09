@@ -1,4 +1,4 @@
-package com.ofilm.test.rxl.ecgview;
+package com.of.test.rxl.ecgview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -12,7 +12,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
-import com.ofilm.test.rxl.R;
+
+import com.of.test.rxl.R;
 
 import java.util.List;
 

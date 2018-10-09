@@ -1,4 +1,4 @@
-package com.ofilm.test.rxl;
+package com.of.test.rxl;
 
 import org.junit.Test;
 

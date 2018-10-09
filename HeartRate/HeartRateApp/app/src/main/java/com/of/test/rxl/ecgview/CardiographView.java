@@ -1,16 +1,14 @@
-package com.ofilm.test.rxl.ecgview;
+package com.of.test.rxl.ecgview;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 
-import com.ofilm.test.rxl.R;
-
+import com.of.test.rxl.R;
 
 
 /**

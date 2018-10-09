@@ -1,4 +1,4 @@
-package com.ofilm.test.rxl;
+package com.of.test.rxl;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ofilm.test.rxl", appContext.getPackageName());
+        assertEquals("com.of.test.rxl", appContext.getPackageName());
     }
 }
