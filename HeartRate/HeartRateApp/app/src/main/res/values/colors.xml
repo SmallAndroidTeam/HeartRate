@@ -9,4 +9,9 @@
     <color name="greenlucency">#ab5d5d</color>
     <color name="trans">#e2d8d8</color>
     <color name="rate">#fffafa</color>
+    <color name="background1">#1D3A67</color>
+    <color name="white">#ffffff</color>
+    <color name="gray">#6c6969</color>
+    <color name="blue">#6c7dd2</color>
+    <color name="green">#08cc15</color>
 </resources>

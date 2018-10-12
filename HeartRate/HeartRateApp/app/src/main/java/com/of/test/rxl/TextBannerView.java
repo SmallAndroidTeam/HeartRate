@@ -1,4 +1,4 @@
-package com.of.test.rxl.ecgview;
+package com.of.test.rxl;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.of.test.rxl.R;
+import com.of.test.rxl.ecgview.DisplayUtils;
 
 import java.util.List;
 

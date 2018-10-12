@@ -1,8 +1,9 @@
-package com.of.test.rxl;
+package com.of.test.rxl.Activity;
 
 
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.os.Handler;
@@ -15,8 +16,10 @@ import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 
+import com.of.test.rxl.MyDatabaseHelper;
+import com.of.test.rxl.R;
 import com.of.test.rxl.ecgview.PathView;
-import com.of.test.rxl.ecgview.TextBannerView;
+import com.of.test.rxl.TextBannerView;
 
 
 import java.util.ArrayList;
@@ -26,6 +29,8 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
+//    private  Intent ChartIntent = new Intent(MainActivity.this, ChartActivity.class);
+
 
     public PathView pathView;
 
@@ -65,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        final Intent ChartIntent = new Intent(MainActivity.this, ChartActivity.class);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         //  sharedPreferencesHelper  = new SharedPreferencesHelper(MainActivity.this,"data");
@@ -110,7 +116,23 @@ public class MainActivity extends AppCompatActivity {
         // setHeartRate(list);
         //mHeartRate.setText(Integer.toString(heartRate));
         saveData();
+
+//        Timer timer = new Timer();
+//        TimerTask tast = new TimerTask(){
+//            @Override
+//            public void run() {
+//                //startActivity(ChartIntent);
+//                Message message=new Message();
+//                message.what=UPDATE_TEXT;
+//                handler.sendMessage(message);
+//            }
+//            };
+//        timer.schedule(tast, 5000);
+
     }
+
+
+
 
 
     private  void initView() {
@@ -254,11 +276,16 @@ public class MainActivity extends AppCompatActivity {
 
     private Handler handler = new Handler(){
         public  void handleMessage(Message message){
-            if(message.what > 0){
+            final Intent ChartIntent = new Intent(MainActivity.this, ChartActivity.class);
+             if(message.what > 0){
                 setHeartRate(mList);
                 mHeartRate.setText(Integer.toString(heartRate));//String.format("%s",heartRate)
                 mHeartRate.setTextColor(Color.WHITE);
             }
+            else if(message.what==0){
+                 startActivity(ChartIntent);
+                 finish();
+             }
         }
     };
 
@@ -268,4 +295,8 @@ public class MainActivity extends AppCompatActivity {
         if(mMyDatabaseHelper != null)
             mMyDatabaseHelper.close();
     }
+
+
+
+
 }

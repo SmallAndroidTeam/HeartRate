@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,7 +55,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center">
 
-                    <com.of.test.rxl.ecgview.TextBannerView
+                    <com.of.test.rxl.TextBannerView
                         android:id="@+id/h_minimum"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -67,7 +67,7 @@
                         app:setTextColor="mTextColor0"
                         app:setTextSize="mTextSize1" />
 
-                    <com.of.test.rxl.ecgview.TextBannerView
+                    <com.of.test.rxl.TextBannerView
                         android:id="@+id/h_maximum"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -79,7 +79,7 @@
                         app:setTextColor="mTextColor0"
                         app:setTextSize="mTextSize1" />
 
-                    <com.of.test.rxl.ecgview.TextBannerView
+                    <com.of.test.rxl.TextBannerView
                         android:id="@+id/h_ave"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -103,7 +103,7 @@
                     android:layout_height="match_parent"
                     android:layout_gravity="center">
 
-                    <com.of.test.rxl.ecgview.TextBannerView
+                    <com.of.test.rxl.TextBannerView
                         android:id="@+id/h_min"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
@@ -114,7 +114,7 @@
                         app:setTextColor="mTextColor1"
                         app:setTextSize="mTextSize0" />
 
-                    <com.of.test.rxl.ecgview.TextBannerView
+                    <com.of.test.rxl.TextBannerView
                         android:id="@+id/h_max"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
@@ -125,7 +125,7 @@
                         app:setTextColor="mTextColor1"
                         app:setTextSize="mTextSize0" />
 
-                    <com.of.test.rxl.ecgview.TextBannerView
+                    <com.of.test.rxl.TextBannerView
                         android:id="@+id/h_average"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
