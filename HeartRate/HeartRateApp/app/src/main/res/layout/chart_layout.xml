@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -66,57 +68,78 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="2">
-                    <TextView
+                    <com.of.test.rxl.TextBannerView
+                        android:id="@+id/min"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="最小"
                         android:textColor="@color/blue"
-                        android:textSize="12sp"/>
-                    <TextView
+                        android:textSize="12sp"
+                        app:setDirection="left_to_right"
+                        app:setGravity="left"
+                        app:setTextColor="mTextColor0"
+                        app:setTextSize="mTextSize1"/>
+                    <com.of.test.rxl.TextBannerView
+                        android:id="@+id/max"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="最大"
                         android:textColor="@color/blue"
-                        android:textSize="12sp"/>
-                    <TextView
+                        android:textSize="12sp"
+                        app:setDirection="left_to_right"
+                        app:setGravity="left"
+                        app:setTextColor="mTextColor0"
+                        app:setTextSize="mTextSize1"/>
+                    <com.of.test.rxl.TextBannerView
+                        android:id="@+id/average"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="平均"
                         android:textColor="@color/blue"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp"
+                        app:setDirection="left_to_right"
+                        app:setGravity="left"
+                        app:setTextColor="mTextColor0"
+                        app:setTextSize="mTextSize1"/>
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="3">
-                    <TextView
-                        android:id="@+id/min"
+                    <com.of.test.rxl.TextBannerView
+                        android:id="@+id/min_value"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="00"
-                        android:textColor="@color/white"
-                        android:textSize="30sp"/>
-                    <TextView
-                        android:id="@+id/max"
+                        app:setDirection="top_to_bottom"
+                        app:setGravity="center"
+                        app:setTextColor="mTextColor1"
+                        app:setTextSize="mTextSize0" />
+                    <com.of.test.rxl.TextBannerView
+                        android:id="@+id/max_value"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="00"
-                        android:textColor="@color/white"
-                        android:textSize="30sp"/>
-                    <TextView
-                        android:id="@+id/average"
+                        app:setDirection="top_to_bottom"
+                        app:setGravity="center"
+                        app:setTextColor="mTextColor1"
+                        app:setTextSize="mTextSize0" />
+                    <com.of.test.rxl.TextBannerView
+                        android:id="@+id/average_value"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:text="000"
-                        android:textColor="@color/white"
-                        android:textSize="30sp"/>
+                        app:setDirection="top_to_bottom"
+                        app:setGravity="center"
+                        app:setTextColor="mTextColor1"
+                        app:setTextSize="mTextSize0"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

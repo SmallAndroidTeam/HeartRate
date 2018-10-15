@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.of.test.rxl.R;
+import com.of.test.rxl.TextBannerView;
 import com.of.test.rxl.chartview.ChartEntity;
 import com.of.test.rxl.chartview.LineChartView;
 
@@ -18,21 +19,30 @@ public class ChartActivity extends AppCompatActivity {
     float averageData;
 
     private LineChartView lineChartView;
-    private TextView Mymax;
-    private TextView Mymin;
-    private TextView Myaverage;
+    private TextBannerView Mymax;
+    private TextBannerView Mymin;
+    private TextBannerView Myaverage;
+    private TextBannerView max_value;
+    private TextBannerView min_value;
+    private TextBannerView average_value;
+
+    ArrayList<ChartEntity> data = new ArrayList<>();
+    ArrayList<String> mStringList=new ArrayList<>();
+    ArrayList<String> mmaxString=new ArrayList<>();
+    ArrayList<String> mminString=new ArrayList<>();
+    ArrayList<String> maverageString=new ArrayList<>();
+    ArrayList<String> mmaxvalue=new ArrayList<>();
+    ArrayList<String> mminvalue=new ArrayList<>();
+    ArrayList<String> maveragevalue=new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chart_layout);
-
         lineChartView= (LineChartView) findViewById(R.id.lineChartView);
-        Mymax=(TextView)findViewById(R.id.max);
-        Mymin=(TextView)findViewById(R.id.min);
-        Myaverage=(TextView)findViewById(R.id.average);
 
-        ArrayList<ChartEntity> data = new ArrayList<>();
+
         ChartEntity entity1 = new ChartEntity();
         entity1.setValue(100);
         entity1.setText("10/22");
@@ -116,12 +126,76 @@ public class ChartActivity extends AppCompatActivity {
         lineChartView.setShadow(true);
         lineChartView.setUnitText("g");
         lineChartView.setDataChart(data);
+        initView();
+        initData();
+
+
+    }
+
+
+    private void initView(){
+        Mymax=(TextBannerView) findViewById(R.id.max);
+        Mymin=(TextBannerView) findViewById(R.id.min);
+        Myaverage=(TextBannerView) findViewById(R.id.average);
+        max_value=(TextBannerView) findViewById(R.id.max_value);
+        min_value=(TextBannerView) findViewById(R.id.min_value);
+        average_value=(TextBannerView) findViewById(R.id.average_value);
+
+    }
+
+
+    private  void  sort()
+
+    {
+        for(int i=0;i< mStringList.size();i++)
+        {
+            if(i%6==0){
+                mminString.add(mStringList.get(i));
+            }
+            else if(i%6==1)
+            {
+                mmaxString.add(mStringList.get(i));
+            }
+            else if(i%6==2) {
+                maverageString.add(mStringList.get(i));
+            }
+            else if(i%6==3){
+                mminvalue.add(mStringList.get(i));
+            }
+            else if(i%6==4){
+                mmaxvalue.add(mStringList.get(i));
+            }
+            else if(i%6==5){
+                maveragevalue.add(mStringList.get(i));
+            }
+        }
+    }
+    private  void initData() {
+
         float max=getMaxValue(data);
         float min=getMinValues(data);
         float average=getAverageValues(data);
-        Mymax.setText(String.valueOf(max));
-        Mymin.setText(String.valueOf(min));
-        Myaverage.setText(String.valueOf(average));
+
+        mStringList = new ArrayList<>();
+        mStringList.add("最小");
+        mStringList.add("最大");
+        mStringList.add("平均");
+        mStringList.add(Float.toString(min));
+        mStringList.add(Float.toString(max));
+        mStringList.add(Float.toString(average));
+
+        sort();
+
+        /**
+         * 设置数据
+         */
+        Mymin.setDatas(mminString);
+        Mymax.setDatas(mmaxString);
+        Myaverage.setDatas(maverageString);
+        min_value.setDatas(mminvalue);
+        max_value.setDatas(mmaxvalue);
+        average_value.setDatas(maveragevalue);
+
     }
 
     private float getMaxValue(ArrayList<ChartEntity> values) {
